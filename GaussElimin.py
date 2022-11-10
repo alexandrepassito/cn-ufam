@@ -2,7 +2,8 @@ import numpy as np
 
 def gaussElimin(a, b):
     n = len(b)
-  # Elimination Phase
+
+# Elimination Phase
     for k in range(0, n-1):
         for i in range(k+1, n):
            if a[i, k] != 0.0:
