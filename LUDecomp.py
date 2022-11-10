@@ -19,7 +19,7 @@ def LUsolve(a,b):
        b[k] = (b[k] - np.dot(a[k,k+1:n],b[k+1:n]))/a[k,k]
     return b
     
- z = np.array([[3.0, -1.0, 4.0],
+z = np.array([[3.0, -1.0, 4.0],
              [-2.0, 0.0, 5.0],
              [7.0, 2.0, -2.0]])
 
