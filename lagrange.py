@@ -56,9 +56,10 @@ x0 = 1250.0
 x1 = 1000.0
 x2 = 750.0
 
-a = np.array([[x0*x0, x0, 1.0],
-             [x1*x1, x1, 1.0],
-             [x2*x2, x2, 1.0]])
+
+a = np.array([[x0**2, x0, 1.0],
+             [x1**2, x1, 1.0],
+             [x2**2, x2, 1.0]])
 
 b = np.array([[25.0, 15.0, 10.0]])
 
@@ -73,4 +74,6 @@ print(poly)
 calc = poly(xp)
 
 print('Interpolated value at %.3f is %.3f.' % (xp, calc))
+
+
 
