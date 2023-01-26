@@ -8,8 +8,6 @@ def newton_interpolation(x, y, xi):
     fdd = [[None for x in range(n)] for x in range(n)]
     #f(X) values at different degrees
     yint = [None for x in range(n)]
-    #error value
-    ea = [None for x in range(n)]
     
     #finding divided difference
     for i in range(n):
@@ -28,7 +26,6 @@ def newton_interpolation(x, y, xi):
     for order in range(1, n):
         xterm = xterm * (xi - x[order-1])
         yint2 = yint[order-1] + fdd[0][order]*xterm
-        ea[order-1] = yint2 - yint[order-1]
         yint[order] = yint2
     
     return (yint2)
